@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Domain;
 using Domain.Exceptions;
+using Infrastructure.Banks;
 
 namespace Infrastructure.Repositories
 {

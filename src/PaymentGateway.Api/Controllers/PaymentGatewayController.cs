@@ -39,7 +39,8 @@ namespace PaymentGateway.Api.Controllers
         /// <param name="payment">Command to request a payment</param>
         /// <returns>The payment id</returns>
         /// <remarks>
-        /// Sample request:
+        /// Valid merchants:
+        /// Apple (7da98d82-5f77-46d9-9531-5472779e1f97) and Abble (ffe03beb-d2fe-43f2-a10e-fe7ee47daba9)
         ///
         ///     POST /api/payments
         ///     {
