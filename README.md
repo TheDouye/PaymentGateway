@@ -10,11 +10,11 @@ The program will listen requests at https://localhost:5001 and you should be red
 ## Assumptations made
 - The idea of the home work was to focus on the API side and the different use cases. That's why:
   - Many services are mocked and dummy implementations are provided. Examples: `DateServiceMock` to provide current date, `CurrencyServiceMock` to provide ISO currencies referential, `PaymentRepository` to save payments and so on.
-  - Simple workflow: no handling of domain events that could affect a payment status. Let's start with this: I would like to implement something more sophisticated if you judge it relevant.
+  - Simple workflow: no domain events that could affect a payment status. I can implement something more sophisticated if you judge it relevant.
   - Focus on testability:
     - Unit tests for most of the classes
-    - Behaviour / Integration tests with SpecFlow: you will find in Documentation folder PaymentGateway.LivingDocumentation.html that you can download and visualize the different test cases using gherkin instructions. The file was generated via the SpecFlow CLI and could be part of any CI. This could be really improved but we were not Three Amigos to write them. Requests are sent to an endpoint built with a `WebApplicationFactory`. See class `RequestPaymentStepDefinitions`.
-  - Clean architecture and BDD like approaches used to underly the different use cases
+    - Behaviour / Integration tests with SpecFlow: you will find in Documentation folder PaymentGateway.LivingDocumentation.html that you can download, and visualize the different test cases using gherkin scripts. The file was generated via the SpecFlow CLI and could be part of any CI. The scenarios could be improved but I did not have my two Amigos to write them ;). Requests are sent to an endpoint built with a `WebApplicationFactory`. See class `RequestPaymentStepDefinitions`. 
+  - Clean architecture and BDD approaches used to underly the different use cases
 
 ## Areas for improvements
 - Exception handling: as a first step, I handled them in an `ExceptionFilter` implementation but its responsibility seems huge. I let some comments in `Merchant` class
